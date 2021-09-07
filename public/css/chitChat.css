@@ -1,0 +1,281 @@
+.allInOneDiv {
+  width: 100%;
+  height: 100%;
+  padding-top: 71px;
+}
+.listOutFriendOnLeft {
+  float: left;
+  width: 35%;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 1px 0px 1px 0.005px rgb(212, 209, 209);
+}
+.listOutFriendChatOnRight {
+  float: right;
+  width: 65%;
+  height: 100%;
+  display: none;
+}
+.headerOnLeft {
+  height: 60px;
+  position: fixed;
+  width: 35%;
+  background-color: rgb(36, 37, 39);
+  padding-top: 12px;
+}
+.headerOnRight {
+  height: 60px;
+  background-color: rgb(36, 37, 39);
+  position: fixed;
+  width: 65%;
+}
+.listFriend {
+  background-color: rgb(36, 37, 39);
+  height: calc(100% - 60px);
+  margin-top: 60px;
+}
+.chatInputForm {
+  width: 65%;
+  height: 60px;
+  background-color: rgb(36, 37, 39);
+  position: absolute;
+  bottom: 0;
+  float: right;
+}
+.chatBoxRight {
+  margin-top: 60px;
+  height: calc(100% - 120px);
+  background-color: rgb(22, 38, 70);
+  overflow: auto;
+  font-size: 60px;
+  display: none;
+}
+.chatBoxRightLoadingInterFace {
+  margin-top: 60px;
+  height: calc(100% - 110px);
+  background-color: rgb(22, 38, 70);
+  display: block;
+  padding-top: 24%;
+}
+.loadingSpinner {
+  color: white;
+}
+
+.imgAvatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.nameStyle {
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: 400;
+  margin-left: 15px;
+  color: white;
+  margin-top: 5px;
+}
+.littleOptions {
+  margin-right: 15px;
+  margin-top: 18px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  margin-left: auto;
+  order: 2;
+  color: white;
+}
+.makeItPointer {
+  cursor: pointer;
+}
+
+.friendDisplay {
+  height: 70px;
+  width: 100%;
+  padding-top: 10px;
+}
+.friendDisplay:hover {
+  background-color: rgb(62, 63, 66);
+}
+.friendListDivider {
+  border: white;
+  color: antiquewhite;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 75px;
+}
+.friendDisplayAvatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 15px;
+}
+.nameLeftStyle {
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: 400;
+  margin-left: 10px;
+  padding-top: 5px;
+  color: white;
+}
+.inputText {
+  width: calc(100% - 70px);
+  height: 38px;
+  margin-left: 15px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px;
+  border-color: grey;
+  margin-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.inputTextSubmitBtn {
+  font-size: 34px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 12px;
+  color: white;
+}
+.commonInBothChat {
+  position: relative;
+  clear: both;
+  width: auto;
+  max-width: 50%;
+  min-width: 50px;
+  padding: 3px 6px 13px 6px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: cursive;
+  font-weight: 300;
+  margin-top: 10px;
+  color: rgb(26, 61, 61);
+  background-color: rgb(202, 248, 248);
+}
+.chatFromFriend {
+  float: left;
+  margin-left: 20px;
+  text-align: left;
+}
+.chatFromYou {
+  float: right;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.chatDropDownOptions {
+  float: right;
+  margin-left: 5px;
+  display: none;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.dropdownOptions {
+  position: relative;
+  z-index: 1;
+  background-color: #f1f1f1;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  float: right;
+  right: 0;
+  display: none;
+}
+.dropdownOptions a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.deleteChatBtn {
+  cursor: pointer;
+}
+.statusOnOffTyping {
+  color: wheat;
+  margin-left: 80px;
+}
+.createdDate {
+  font-size: 9px;
+  position: absolute;
+  bottom: 0;
+  float: right;
+  font-family: cursive;
+  font-weight: bolder;
+}
+.lastMessage {
+  color: white;
+  margin-left: 75px;
+  font-size: 14px;
+}
+.lastMessageTime {
+  float: right;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.chatBoxRightDefault {
+  height: 100%;
+  overflow: auto;
+  font-size: 60px;
+  background-color: rgb(36, 37, 38);
+}
+
+/* animation related */
+
+.animeAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  clear: both;
+}
+.femaleAvatar {
+  float: left;
+  /* margin-top: 20px; */
+}
+.maleAvatar {
+  float: right;
+  /* margin-top: -50px; */
+}
+.insideChatBoxDefault {
+  height: calc(100% - 40px);
+  margin: 20px;
+  border-radius: 18px;
+  padding: 20px 40px 20px 40px;
+  /* overflow: auto; */
+  overflow: auto;
+  background-color: yellowgreen;
+}
+.animeChatBox {
+  min-width: 40px;
+  max-width: 50%;
+  height: auto;
+  background-color: teal;
+  padding: 3px 6px 3px 6px;
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.femaleAnimeChatBox {
+  /* margin-top: 30px; */
+  margin-left: 15px;
+  float: left;
+}
+.maleAnimeChatBox {
+  float: right;
+  margin-right: 15px;
+  /* margin-top: -40px; */
+}

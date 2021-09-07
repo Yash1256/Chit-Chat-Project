@@ -1,0 +1,60 @@
+<div class="profile-photo-section">
+        <!-- <div class="photos-navbar">
+          <nav class="navbar navbar-expand nav-con" style="background-color: white">
+            <div class="navbar-brand">Pictures</div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+              <a class="nav-link" href="#">Add new photo</a>
+            </div>
+          </nav> -->
+        <div class="profile-friend-header dis-inline-block">
+          <span class="PFHL-data">Pictures</span>
+          <div
+            class="dis-inline-block justify-content-end"
+            style="width: 100%; border-top-right-radius: 20px"
+          >
+            <a
+              href="#"
+              class="PFHR-data"
+              style="
+                font-size: 20px;
+                margin-right: 5px;
+                padding-top: 7px;
+                padding-right: 6px;
+              "
+              >Add new photo</a
+            >
+          </div>
+        </div>
+
+        <div class="container-fluid profile-pictures-container">
+          <hr
+            style="
+              margin-top: 0px;
+              margin-bottom: 0px;
+              color: wheat;
+              z-index: 1;
+              width: 100%;
+              border-width: 10px;
+            "
+          />
+          <div class="row justify-content-center">
+            <% for(var i=0,len=friendlist.length;i < len+4;i++) { %> <% if
+            ((len%2==1) && (len-i)==1) { %>
+            <div
+              class="justify-content-start col-lg-3 col-md-3 col-sm-3 picturesListContainer"
+            >
+              <% } else{%>
+              <div class="col-lg-3 col-md-3 col-sm-3 picturesListContainer">
+                <%}%>
+                <img
+                  class="profile-pictures"
+                  src="/users/profileD.png"
+                  alt=""
+                />
+              </div>
+              <%}%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

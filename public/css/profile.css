@@ -1,0 +1,452 @@
+.profile-card-outside {
+  margin-top: -9px;
+  height: 400px;
+  background-color: rgb(36, 37, 39);
+  width: 100%;
+}
+.profile-card-inside {
+  margin-top: 80px;
+  height: 270px;
+  background-color: rgb(24, 25, 26);
+  max-width: 700px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0;
+  z-index: -1;
+}
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: -160px;
+  z-index: 1;
+}
+.profile-name {
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+  font-family: cursive;
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+.profile-separtor {
+  max-width: 700px;
+  color: white;
+}
+.profile-navbar-inline {
+  margin-left: 100px;
+  max-width: 700px;
+  float: left;
+  height: 100px;
+}
+.profile-navbar-items {
+  display: inline;
+  color: white;
+  text-align: center;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 8px 15px 8px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: cursive;
+  font-weight: 200;
+  cursor: pointer;
+}
+.profile-navbar-items:hover {
+  background-color: rgb(156, 157, 158);
+}
+
+.profile-content {
+  max-width: 700px;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+}
+
+.profile-left-block {
+  height: 169px;
+  float: left;
+  background-color: rgb(36, 37, 39);
+  border-radius: 8px;
+  width: 240px;
+  margin-top: 25px;
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .profile-left-block {
+    display: none;
+  }
+}
+.profile-post-content {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 35px;
+}
+
+.profile-post-form-add-margin {
+  margin-top: 0px;
+}
+
+.profile-post-list {
+  /* width: 100%; */
+  max-width: 640px;
+  margin: 125px auto;
+}
+.profile-intro-box {
+  color: white;
+  font-size: 18px;
+  font-family: cursive;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.intro-box-item {
+  font-size: 14px;
+  border-width: 20px;
+  border-bottom: white;
+  border-top: white;
+  font-family: cursive;
+  color: white;
+  padding: 6px 2px 6px 2px;
+}
+.intro-box-item-edit {
+  font-weight: 200;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgb(132, 138, 133);
+  border-radius: 5px;
+}
+.intro-box-item-edit:hover {
+  background-color: rgb(81, 83, 82);
+  border-radius: 5px;
+}
+.about-user {
+  max-width: 700px;
+  margin: 35px auto;
+  /* height: auto; */
+  background-color: rgb(36, 37, 39);
+  border-radius: 20px;
+  height: auto;
+  display: none;
+  /* width: 100%; */
+}
+
+.about-right-div {
+  /* height: 350px; */
+  height: auto;
+  width: 65%;
+  background-color: black;
+  float: right;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 10px 10px 3px 0px;
+}
+
+.about-left-div {
+  height: 350px;
+  width: 35%;
+  background-color: rgb(36, 37, 39);
+  float: left;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 0 10px 0 10px;
+}
+
+.about-user-content-left {
+  color: white;
+  margin: 10px 0 0 0px;
+  padding: 4px 0 4px 12px;
+  font-size: 16px;
+}
+
+.about-user-content-left:hover {
+  cursor: pointer;
+  background-color: rgb(83, 79, 79);
+  border-radius: 8px;
+}
+
+.form-group {
+  display: none;
+}
+.overview {
+  display: block;
+}
+
+.work-and-education {
+  display: none;
+}
+
+.place-lived {
+  display: none;
+}
+
+.details-about-you {
+  display: none;
+}
+
+.check-box-interested {
+  margin-left: 25px;
+  font-size: 20px;
+  color: white;
+}
+
+.contact-and-info {
+  display: none;
+}
+
+.about-user-content-right {
+  margin-left: 20px;
+  margin-right: 4px;
+  font-size: 16px;
+  color: white;
+  margin-top: 15px;
+  padding: 9px 0px 9px 0px;
+}
+
+.about-user-content-right-form {
+  margin-left: 20px;
+  margin-right: 4px;
+  margin-top: 10px;
+  color: blue;
+  font-style: 21px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 9px 0px 9px 0px;
+}
+
+.Three-bindu {
+  float: right;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.about-form-shift {
+  background-color: rgb(36, 37, 39, 0.9);
+  margin-left: 10px;
+  max-width: 97%;
+  margin-bottom: 15px;
+  height: 50px;
+  border-radius: rgb(36, 37, 39, 0.9);
+  border-width: thin;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.8s 0.2s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+.submit-cancel {
+  padding: 10px 0px 20px 0px;
+}
+
+.about-btn {
+  font-size: 18px;
+  color: white;
+  float: right;
+  padding: 3px 9px 3px 9px;
+  border-radius: 8px;
+}
+
+.about-btn:hover {
+  background-color: rgb(36, 37, 39, 0.7);
+  cursor: pointer;
+}
+
+.about-relationship {
+  margin-left: 10px;
+  max-width: 96%;
+  background-color: rgb(36, 37, 39, 0.7);
+  cursor: pointer;
+}
+
+.profile-friend-section {
+  max-width: 700px;
+  margin: 35px auto;
+  /* height: auto; */
+  background-color: rgb(36, 37, 39);
+  border-radius: 20px;
+  height: auto;
+  display: none;
+}
+.profile-photo-section {
+  max-width: 700px;
+  margin: 35px auto;
+  border-radius: 20px;
+  /* height: auto; */
+
+  height: 200px;
+  display: none;
+}
+.add-cover-photo {
+  font-size: 16px;
+  z-index: 2;
+  margin-top: -500px;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+  margin-left: 78%;
+  background-color: rgb(36, 37, 39, 0.9);
+  padding: 7px 7px 7px 7px;
+  border-radius: 8px;
+}
+.add-cover-photo:hover {
+  background-color: rgb(60, 61, 63);
+  padding: 7px 7px 7px 7px;
+  border-radius: 8px;
+}
+.upload-cover-photo-confirm {
+  display: none;
+  z-index: 2;
+  margin-top: -263px;
+  height: 40px;
+  background-color: rgb(21, 19, 23);
+  opacity: 0.5;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+.confirm-top-left-data {
+  float: left;
+  font-size: 18px;
+  margin-top: 5px;
+  font-style: italic;
+  margin-left: 22px;
+  color: white;
+}
+.confirm-top-right-button {
+  margin-top: 5px;
+  margin-left: 5px;
+  color: white;
+  background-color: rgb(36, 37, 39);
+  text-decoration: none;
+  border: 0;
+  outline: none;
+  height: 32px;
+  border-radius: 8px;
+}
+.confirm-top-right-button:hover {
+  background-color: rgb(81, 83, 82);
+  outline: thin;
+}
+
+.add-user-photo {
+  font-size: 18px;
+  z-index: 1;
+  margin-top: -500px;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+  margin-left: 21%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(36, 37, 39, 0.5);
+  padding: 7px 7px 7px 7px;
+  border-radius: 45%;
+}
+
+/* friend section */
+.profile-friend-header {
+  background-color: rgb(36, 37, 39);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+.friend-list-search-profile {
+  width: 80%;
+  margin-left: 40px;
+}
+
+.vertical {
+  border-left: 1px solid rgb(196, 194, 194);
+  height: 200px;
+  left: 42%;
+  position: absolute;
+}
+
+.Upper-Content {
+  margin-left: 20px;
+  margin-right: 4px;
+  color: white;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.PFHL-data {
+  margin-left: 20px;
+  margin-right: 4px;
+  color: white;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+.PFHR-data {
+  margin-left: 3px;
+  margin-right: 3px;
+
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 13px;
+  text-decoration: none;
+  font-family: 'Courier New, Courier, monospace';
+  text-rendering: optimizeSpeed;
+}
+.profile-friends-list {
+  background-color: rgb(36, 37, 39);
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.friendListContainer {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  background-color: tomato;
+  height: 100px;
+  border-radius: 12px;
+}
+@media screen and (max-width: 576px) {
+  .friendListContainer {
+    width: 80%;
+  }
+  .profile-friend-username {
+    font-size: 24px;
+  }
+}
+.profile-friend-avater {
+  margin-left: -12px;
+  height: 100%;
+  width: 90px;
+  background-color: teal;
+  border-radius: 12px;
+}
+.profile-friend-username {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+}
+.profile-pictures-container {
+  height: auto;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: rgb(36, 37, 39);
+}
+.picturesListContainer {
+  margin-left: 8px;
+  margin-top: 20px;
+  background-color: tomato;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.profile-pictures {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .picturesListContainer {
+    height: 200px;
+    width: 40%;
+    box-shadow: 10px 10px 5px grey;
+  }
+}

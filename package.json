@@ -1,0 +1,40 @@
+{
+  "name": "wad-project",
+  "version": "1.0.0",
+  "description": "This is our WAD Project (An Instagram Clone)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js"
+  },
+  "author": "Yashx2,Priyanshu",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.2",
+    "express-rate-limit": "^5.2.3",
+    "helmet": "^4.4.1",
+    "hpp": "^0.2.3",
+    "html-to-text": "^7.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.12",
+    "mongoose-simple-random": "^0.4.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.4.17",
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2",
+    "sharp": "^0.27.2",
+    "socket.io": "^4.0.1",
+    "validator": "^13.5.2",
+    "xss-clean": "^0.1.1"
+  }
+}

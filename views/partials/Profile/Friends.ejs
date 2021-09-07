@@ -1,0 +1,87 @@
+<div class="profile-friend-section">
+  <div class="profile-friend-header dis-inline-block">
+    <span class="PFHL-data">Friends</span>
+    <div class="dis-inline-block justify-content-end" style="
+        background-color: rgb(36, 37, 39);
+        width: 100%;
+        border-top-right-radius: 20px;
+      ">
+      <div style="padding-top: 8px">
+        <form class="form-inline my-2 my-lg-0 friend-list-search-profile">
+          <input style="height: 30px" class="form-control mr-sm-2 search-form" type="search"
+            placeholder="🕵🏻‍♂️&nbsp; Search" aria-label="Search" />
+        </form>
+      </div>
+      <a href="#" class="PFHR-data">Friend Request</a>
+      <a href="#" class="PFHR-data">Find Friends</a>
+      <div>
+        <a id=" dropdownMenu2" class="dropleft" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-ellipsis-v post-dropdown-options PFHR-data" aria-hidden="true"
+            style="font-size: 25px;margin-right: 20px;margin-left: 10px;"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-from-navbar" aria-labelledby="dropdownMenu2">
+          <li>
+            <a class="dropdown-item font-color-white delete-post">Delete</a>
+          </li>
+          <li>
+            <a class="dropdown-item font-color-white delete-post">
+              in future
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid profile-friends-list">
+    <hr style="
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: wheat;
+        z-index: 1;
+        width: 100%;
+        border-width: 10px;
+      " />
+
+
+    <div class="row justify-content-center">
+      <% for(var i=0,len=friendlist.length;i < len;i++) { %>
+        <% if(friendlist[i].requestedUserId.id !=user.id) {%>
+          <div class="col-lg-5 col-md-5 col-sm-5 friendListContainer ForFriendRemove">
+            <img class="profile-friend-avater" src="<%= `users/${friendlist[i].requestedUserId.userPhoto}` %>" alt="" />
+            <span class="profile-friend-username UserName">
+              <%=friendlist[i].requestedUserId.username%>
+            </span>
+            <a id="dropdownMenu2" class="dropleft" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-ellipsis-v post-dropdown-options PFHR-data" aria-hidden="true"
+                style="font-size: 35px; float: right; margin-top: 20px"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-from-navbar" aria-labelledby="dropdownMenu2">
+              <li>
+                <a class="dropdown-item font-color-white removeFriend">Remove</a>
+              </li>
+            </ul>
+          </div>
+          <%}%>
+            <% if(friendlist[i].acceptedUserId.id !=user.id) {%>
+              <div class="col-lg-5 col-md-5 col-sm-5 friendListContainer ForFriendRemove">
+                <img class="profile-friend-avater" src="<%= `users/${friendlist[i].acceptedUserId.userPhoto}` %>"
+                  alt="" />
+                <span class="profile-friend-username UserName">
+                  <%=friendlist[i].acceptedUserId.username%>
+                </span>
+                <a id="dropdownMenu2" class="dropleft" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-ellipsis-v post-dropdown-options PFHR-data" aria-hidden="true"
+                    style="font-size: 35px; float: right; margin-top: 20px"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-from-navbar" aria-labelledby="dropdownMenu2">
+                  <li>
+                    <a class="dropdown-item font-color-white removeFriend">Remove</a>
+                  </li>
+                </ul>
+              </div>
+              <%}%>
+                <%}%>
+    </div>
+  </div>
+</div>

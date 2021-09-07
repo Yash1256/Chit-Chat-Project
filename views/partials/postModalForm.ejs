@@ -1,0 +1,93 @@
+<form id="postForm">
+  <div id="Post-Modal" class="Post-Modal">
+    <div class="modal-content">
+      <div style="display: inline">
+        <span class="highLightIt">Create a post</span>
+        <span style="float: right" class="closeModalWindow">&times;</span>
+      </div>
+      <hr style="color: white" />
+      <div class="modal-header">
+        <img
+          class="avatar"
+          src="<%= `users/${user.userPhoto}` %>"
+          alt="profileD.png not found!"
+        />
+        <span class="show-username username-pos-modal">
+          <%= user.username%>
+        </span>
+      </div>
+      <textarea
+        id="postContent"
+        class="post-input-inModal"
+        type="text"
+        placeholder="What's on your mind, <%= user.firstname%> ?"
+        aria-label="post"
+      ></textarea>
+      <div class="modal-footer">
+        <!-- image upload-->
+        <input
+          type="file"
+          accept="image/*"
+          id="actual-btn-one"
+          name="image"
+          hidden
+        />
+        <label class="image-video-file-submit-btn" for="actual-btn-one">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="blue"
+            class="bi bi-image-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"
+            />
+          </svg>
+        </label>
+        <!-- video upload -->
+        <input
+          type="file"
+          accept="video/*"
+          id="actual-btn-two"
+          name="video"
+          hidden
+        />
+        <label class="image-video-file-btn" for="actual-btn-two">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="blue"
+            class="bi bi-camera-reels-fill"
+            viewBox="0 0 16 16"
+          >
+            <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            <path
+              d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"
+            />
+          </svg>
+        </label>
+        <!-- document upload -->
+        <input type="file" id="actual-btn-three" hidden />
+        <label class="image-video-file-btn" for="actual-btn-three">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="blue"
+            class="bi bi-file-earmark"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"
+            />
+          </svg>
+        </label>
+        <button type="submit" class="Post-Btn">Post</button>
+      </div>
+    </div>
+  </div>
+</form>

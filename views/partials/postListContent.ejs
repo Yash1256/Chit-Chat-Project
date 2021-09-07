@@ -1,0 +1,82 @@
+<% for(var list of allPosts) { %>
+
+  <div data-id="<%= list.id %>" class="post-data-with-information">
+    <img class="avatar avatar-margin noselect" src="<%= `users/${list.authorId.userPhoto}` %>"
+      alt="profileD.png not found!" />
+    <span class="show-username noselect">
+      <%= list.authorUsername %>
+    </span>
+    <div class="time-position noselect">
+      <% if(Math.floor((Date.now() - parseInt(list.createdDate))*1.0/(1000*3600*24))==0) { %>
+        <%= Math.floor((Date.now() - parseInt(list.createdDate))*1.0/(1000*3600)) %>
+          hours ago <% } else {%>
+            <%= Math.floor((Date.now() - parseInt(list.createdDate))*1.0/(1000*3600*24)) %> days ago <% } %>
+    </div>
+    <div style="float: right;margin-top: -45px;">
+      <a id="dropdownMenu2" class="dropleft" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-ellipsis-v post-dropdown-options" aria-hidden="true" style="font-size: 35px;"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-from-navbar" aria-labelledby="dropdownMenu2">
+
+        <% if (user.id==list.authorId._id) {%>
+          <li>
+            <a class="dropdown-item font-color-white delete-post">Delete</a>
+          </li>
+          <%}%>
+            <li>
+              <a class="dropdown-item font-color-white delete-post">
+                in future
+              </a>
+              <a class="dropdown-item font-color-white delete-post">
+
+              </a>
+            </li>
+      </ul>
+    </div>
+    <div class="post-summary">
+      <%= list.postContent %>
+    </div>
+    <img class="img-or-video" src="<%= `posts/${list.image}` %>" alt="image not found!" />
+    <div class="reacted-people likes-count">
+      <%= list.likes.length %>&nbsp;like(s)
+    </div>
+    <div class="comments-count">
+      <a data-wow="2" class="Comments commentSection on-hover-cursor">
+        <%= list.commentCount %> Comments
+      </a>
+    </div>
+    <hr class="dropdown-divider" />
+    <div class="row">
+      <div class="col-4 on-hover-cursor add-on noselect like-color-toggle">
+        <% if (list.likes.indexOf(user.username)> -1) {%>
+          <div class="liked-already">
+            <i class="fas fa-thumbs-up"></i>&nbsp;Like
+          </div>
+          <%} else {%>
+            <div class="not-liked"><i class="fas fa-thumbs-up"></i>&nbsp;Like</div>
+            <%}%>
+      </div>
+      <div class="col-4 noselect on-hover-cursor add-on commentSection">
+        <i class="fas fa-comment-dots"></i>&nbsp;Comment
+      </div>
+      <div class="col-4 on-hover-cursor add-on noselect">
+        <i class="fas fa-share"></i>&nbsp;Share
+      </div>
+    </div>
+    <hr class="dropdown-divider" />
+    <div class="Comment-Post">
+      <form class="commentPost">
+        <img class="avatar Comment-Post-Avatar" src="<%= `users/${user.userPhoto}` %>" alt="" />
+        <textarea class="commentPostData" name="commentPostData" id="commentPostData"></textarea>
+        <button type="submit" class="commentPostSubmit" style="outline: none">
+          <i class="fa fa-paper-plane" aria-hidden="true"
+            style="font-size: 30px;background-color: rgb(36,37,39);color:white"></i>
+        </button>
+      </form>
+    </div>
+    <hr class="dropdown-divider" style="margin-top: -0.5px;" />
+    <div class="Comments-Hide">
+
+    </div>
+  </div>
+  <% } %>

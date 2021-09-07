@@ -1,0 +1,112 @@
+body {
+  background: white;
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
+  display: flex;
+}
+#text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.brand-name {
+  font-size: 100px;
+  font-weight: 300;
+  font-family: 'Andrellina';
+}
+#loginForm {
+  margin-top: 20px;
+  display: block;
+}
+label {
+  float: left;
+  padding: 5px 0px 3px 0px;
+  font-size: 20px;
+  font-weight: 200;
+  font-family: cursive;
+  margin-left: 50px;
+}
+#psswd {
+  margin-top: 10px;
+}
+.input-data {
+  border-radius: 20px;
+  background-color: rgb(194, 194, 247);
+  outline: none;
+  border: 0;
+  line-height: 40px;
+  height: 40px;
+  width: 85%;
+  margin-bottom: 10px;
+}
+.input-data::placeholder {
+  color: black;
+}
+
+.btn-submit {
+  width: 65%;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: rgb(111, 111, 207);
+  height: 45px;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.btn-submit:focus {
+  outline: none;
+}
+.btn-submit:hover {
+  background-color: rgb(92, 92, 190);
+}
+.extra-content {
+  font-size: 18px;
+  padding: 2px 0px 2px 0px;
+}
+#click-signup,
+#forgotPassword {
+  text-decoration: none;
+  color: rgb(157, 157, 229);
+  cursor: pointer;
+}
+/* signupForm */
+.signupFormPage1 {
+  display: none;
+  margin-top: 20px;
+}
+.signupFormPage2 {
+  display: none;
+  margin-top: 20px;
+}
+.next-btn {
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 50px;
+  margin-top: -10px;
+  padding: 0px;
+  margin-bottom: -50px;
+  color: rgb(127, 127, 233);
+}
+.next-btn:focus {
+  outline: none;
+  color: rgb(127, 127, 233);
+}
+
+.next-btn:hover {
+  color: rgb(127, 127, 233);
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}

@@ -1,0 +1,200 @@
+<%- include('partials/header.ejs') %>
+
+  <div class="container newsFeed-body">
+    <!-- left block -->
+    <div style="position: fixed;" class="left-block">
+      <div class="left-right-block-header">Friend Suggestion</div>
+      <div>
+        <form class="form-inline my-2 my-lg-0 friend-list-search">
+          <input class="form-control mr-sm-2 search-form" type="search" placeholder="🕵🏻‍♂️&nbsp; Search"
+            aria-label="Search" />
+        </form>
+      </div>
+      <div class="suggestionList">
+        <% for(var list of friendSuggestion) { %>
+          <div class="friend-list-item addFriendDiv">
+            <img class="avatar avatar-margin dis-inline-block" src="<%= `users/${list.userPhoto}` %>" alt="" />
+            <span class="dis-inline-block show-username">
+              <%= list.username%>
+            </span>
+            <span class="add-friend-option">
+              Add friend
+            </span>
+          </div>
+          <% }%>
+      </div>
+    </div>
+
+    <!-- right block -->
+    <!-- TODO Have to Enlarge the Background Image  -->
+    <div class="right-block-profile-card">
+      <div class="Profile-Card">
+        <img class="bg-profile-pic" src="<%= `coverPhoto/${user.coverPhoto}` %>" alt="" />
+        <img class="avatar avatar-center Profile-Card-Pic-Up" src="<%= `users/${user.userPhoto}` %>" alt="" />
+        <div class="show-username noselect" style="text-decoration: underline">
+          <%= user.firstname%>
+            <%= user.lastname%>
+        </div>
+        <div class="show-custom-card-status">
+          Make friends but never best friends because they are the one who hurt
+          you first
+        </div>
+        <hr />
+        <div style="display: inline">
+          <span class="sub-part" style="margin-left: 20px">Who viewed your profile</span>
+          <span class="sub-part" style="float: right; margin-right: 20px">12</span>
+        </div>
+        <div style="display: inline">
+          <span class="sub-part" style="margin-left: 20px">Connections</span>
+          <span class="sub-part" style="float: right; margin-right: 20px">163</span>
+        </div>
+        <div>
+          <span class="sub-part" style="margin-left: 20px; font-weight: 500">Grow your network</span>
+        </div>
+      </div>
+    </div>
+    <div class="sticky right-block">
+      <div class="left-right-block-header">FRIENDS</div>
+      <div>
+        <form class="form-inline my-2 my-lg-0 friend-list-search">
+          <input class="form-control mr-sm-2 search-form" type="search" placeholder="🕵🏻‍♂️&nbsp; Search"
+            aria-label="Search" />
+        </form>
+      </div>
+      <div class="friend-list">
+        <% for(var list of friendlist) { %>
+          <% if(list.requestedUserId.id !=user.id) {%>
+            <div class="friend-list-item">
+              <img class="avatar avatar-margin dis-inline-block" src="<%= `users/${list.requestedUserId.userPhoto}` %>"
+                alt="" />
+
+              <span class="dis-inline-block show-username">
+                <%= list.requestedUserId.username %>
+              </span>
+              <span class="friend-status">
+                <a class="btn-with-a" href="">status here "</a>
+              </span>
+            </div>
+            <% } %>
+              <% if(list.acceptedUserId.id !=user.id) {%>
+                <div class="friend-list-item">
+                  <img class="avatar avatar-margin dis-inline-block"
+                    src="<%= `users/${list.acceptedUserId.userPhoto}` %>" alt="" />
+
+                  <span class="dis-inline-block show-username">
+                    <%= list.acceptedUserId.username %>
+                  </span>
+                  <span class="friend-status">
+                    <a class="btn-with-a" href="">status here "</a>
+                  </span>
+                </div>
+                <% } %>
+                  <% } %>
+      </div>
+      <!-- <div class="footer-data">
+        bun
+      </div> -->
+    </div>
+
+    <!-- center block -->
+    <!-- TODO : Have to Correct the Display of the "What's in your mind Button"-->
+    <div class="list-of-status">
+      <!-- loop here to list out all status -->
+      <table>
+        <td>
+          <img id="on-story-change" src="<%= `users/${user.userPhoto}` %>" alt="status not found"
+            style="height: 150px;width: 130px;" class="status-img" />
+          <center>
+            <form id="story-form" style="margin: -30px auto;">
+              <input type="file" accept="image/*" id="story-btn" name="image" hidden />
+              <label class="story-submit-btn" for="story-btn">
+                <i class="fas fa-plus story-plus-btn"></i>
+              </label>
+              <p class="Create-a-Story-P">
+                Create a Story
+              </p>
+              <div class="upload-story-confirm">
+                <div class="story-confirm-left-data">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                  Are you sure want to upload a story ?
+                </div>
+                <div style="float: right; margin-right: 22px">
+                  <button type="button" class="cancel-confirm-story">
+                    Cancel
+                  </button>
+                  <button type="submit" class="cancel-confirm-story">
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </form>
+
+          </center>
+
+        </td>
+        <!-- himself or herself story -->
+        <td class="statusHoverEffect">
+          <% for(var ele of userStory) {%>
+            <!-- <td> -->
+            <div>
+              <img src="<%= `story/${ele.storyPhoto}` %>" alt="status not found" class="status-img" />
+              <center>
+                <div class="story-username">
+                  <%= ele.authorFirstName%>
+                </div>
+              </center>
+            </div>
+            <!-- </td> -->
+            <%}%>
+        </td>
+        <!-- friend story -->
+        <% for(var list of friendStory) { %>
+          <td class="statusHoverEffect">
+            <% for(var ele of list) {%>
+              <div>
+                <img src="<%= `story/${ele.storyPhoto}` %>" alt="status not found" class="status-img" />
+                <center>
+                  <div class="story-username">
+                    <%= ele.authorFirstName%>
+                  </div>
+                </center>
+              </div>
+              <%}%>
+          </td>
+          <%}%>
+      </table>
+    </div>
+    <div class="post-form">
+      <div class="post-form-l1">
+        <img class="avatar avatar-margin" src="<%= `users/${user.userPhoto}` %>" alt="profileD.png not found!" />
+
+        <button class="post-input" aria-label="post" type="button">
+          What's on your mind, <%= user.firstname%> ?
+        </button>
+        <hr style="color: white;margin-bottom: 8px;margin-top: 15px;" />
+        <div class="row">
+          <div class="col-4 post-options">
+            Photo/Video
+          </div>
+          <div class="col-4 post-options">
+            Tag Friends
+          </div>
+          <div class="col-4 post-options">
+            Feeling/Activity
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- loop on post content to post content here -->
+    <div class="post-list">
+      <%- include('partials/postListContent.ejs') %>
+    </div>
+  </div>
+
+  <!-- onwards post modal -->
+  <%- include('partials/postModalForm.ejs') %>
+    <!-- till here -->
+
+    <script src="/javascripts/newsfeed.js"></script>
+    <%- include('partials/footer.ejs') %>

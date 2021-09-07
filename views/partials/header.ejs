@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <!-- JavaScript Bundle with Popper -->
+  <script src="/javascripts/bootstrapJS.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/newsfeed.css" />
+  <link rel="stylesheet" href="/css/profile.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link href="http://fonts.cdnfonts.com/css/andrellina" rel="stylesheet" />
+  <script src="/javascripts/axios.js"></script>
+</head>
+
+<body style="background-color: rgb(24, 25, 26)">
+  <input class="loggedInUser" value="<%= user.username%>" hidden></input>
+  <nav class="navbar navbar-expand-md fixed-top nav-con" style="background-color: rgb(36, 37, 39)">
+    <a class="navbar-brand noselect" href="/newsFeed">
+      <img src="/img/logo.jpg" width="56px" height="50px" alt="logo.png not found!" style="margin-bottom: 10px" />
+      <div class="jump-letter noselect">C</div>
+      <div class="jump-letter noselect">h</div>
+      <div class="jump-letter noselect">i</div>
+      <div class="jump-letter noselect">t</div>
+      <div class="jump-letter noselect">C</div>
+      <div class="jump-letter noselect">h</div>
+      <div class="jump-letter noselect">a</div>
+      <div class="jump-letter noselect">t</div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-sliders-h" style="font-size: 34px; color: white"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+      <div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2 search-form" type="search" placeholder="🕵🏻‍♂️&nbsp; Search"
+            aria-label="Search" />
+        </form>
+      </div>
+
+      <span class="nav-item dis-inline-block">
+        <a class="nav-link" href="/newsFeed"><i class="fas fa-home icon-font"></i></a>
+      </span>
+      <span class="nav-item dis-inline-block">
+        <a class="nav-link" href="/chitChat"><i class="fab fa-facebook-messenger icon-font"></i></a>
+      </span>
+      <span class="nav-item dis-inline-block">
+        <a class="nav-link" href="#"><i class="far fa-compass icon-font"></i></a>
+      </span>
+      <span class="nav-item dis-inline-block">
+        <a class="nav-link" href="#"><i class="far fa-heart icon-font"></i></a>
+      </span>
+
+      <div class="nav-item dropdown dis-inline-block on-hover-cursor">
+        <a id="dropdownMenu2" class="dropleft" data-bs-toggle="dropdown" aria-expanded="false">
+          <img class="avatar noselect" src="<%= `users/${user.userPhoto}` %>" alt="profileD.png not found!" />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-from-navbar" aria-labelledby="dropdownMenu2">
+          <li>
+            <a class="dropdown-item font-color-white" href="/profile">Profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item font-color-white" href="#">Saved</a>
+          </li>
+          <li>
+            <a class="dropdown-item font-color-white" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item font-color-white" href="#">Switch Accounts</a>
+          </li>
+          <li>
+            <a class="dropdown-item font-color-white" id="logout" style="cursor: pointer">Signout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script src="/javascripts/header.js"></script>
+</body>
+
+</html>

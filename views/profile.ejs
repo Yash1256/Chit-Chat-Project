@@ -1,0 +1,109 @@
+<%- include('partials/header.ejs') %>
+<div class="profile-card-outside">
+  <center>
+    <div class="profile-card-inside">
+      <img
+        src="<%= `/coverPhoto/${user.coverPhoto}` %>"
+        width="100%"
+        height="100%"
+        alt=""
+      />
+
+      <form id="upload-cover-photo-form" style="margin-top: -40px">
+        <input
+          type="file"
+          accept="image/*"
+          name="cover-photo"
+          id="upload-cover-photo"
+          hidden
+        />
+        <label for="upload-cover-photo" class="add-cover-photo">
+          <i class="fa fa-camera" aria-hidden="true">&nbsp;Add Cover Photo</i>
+        </label>
+        <div class="upload-cover-photo-confirm" aria-hidden="false">
+          <div class="confirm-top-left-data">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            Your cover photo is public
+          </div>
+          <div style="float: right; margin-right: 22px">
+            <button
+              type="button"
+              class="confirm-top-right-button cancel-upload-cover-photo"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="confirm-top-right-button">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </form>
+      <form id="upload-user-photo-form" style="margin-top: 2px">
+        <input
+          type="file"
+          accept="image/*"
+          name="user-photo"
+          id="upload-user-photo"
+          hidden
+        />
+        <label for="upload-user-photo" class="add-user-photo">
+          <i class="fa fa-camera" aria-hidden="true" style="opacity: 1"></i>
+        </label>
+        <div
+          class="upload-cover-photo-confirm"
+          style="margin-top: -298px"
+          aria-hidden="false"
+        >
+          <div class="confirm-top-left-data">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            Your cover photo is public
+          </div>
+          <div style="float: right; margin-right: 22px">
+            <button
+              type="button"
+              class="confirm-top-right-button cancel-upload-cover-photo"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="confirm-top-right-button">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <img class="profile-avatar" src="<%= `users/${user.userPhoto}` %>" alt="" />
+
+    <div class="profile-name">
+      <%= user.firstname %>&nbsp;<%=user.lastname%>
+    </div>
+
+    <hr class="profile-separtor" />
+    <div>
+      <div clas="profile-navbar-inline row sticky fixed-top noselect">
+        <div
+          style="color: blue"
+          class="col-3 profile-navbar-items"
+          id="POST_BTN"
+        >
+          Posts
+        </div>
+        <div class="col-3 profile-navbar-items" id="ABOUT_BTN">About</div>
+        <div class="col-3 profile-navbar-items" id="FRIENDS_BTN">Friends</div>
+        <div class="col-3 profile-navbar-items" id="PHOTOS_BTN">Photos</div>
+      </div>
+    </div>
+  </center>
+    <%- include('partials/Profile/Post.ejs') %>
+    <%- include('partials/Profile/About.ejs') %>
+    <%- include('partials/Profile/Friends.ejs') %>
+    <%- include('partials/Profile/Photos.ejs') %>
+    <%- include('partials/postModalForm.ejs') %>
+
+    <script src="/javascripts/newsfeed.js"></script>
+    <script src="/javascripts/profile.js"></script>
+
+    <%- include('partials/footer.ejs') %>
+  </div>
+</div>

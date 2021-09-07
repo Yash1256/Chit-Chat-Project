@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href="http://fonts.cdnfonts.com/css/andrellina" rel="stylesheet">
+    <link rel="stylesheet" href="/css/authorization.css" />
+    <script src="/javascripts/axios.js"></script>
+</head>
+
+
+<body>
+    <canvas id="canvasOnly"></canvas>
+
+    <center>
+        <div id="overlay" class="noselect">
+            <div id="text">
+                <div class="login-form-class">
+                    <div class="brand-name">ChitChat</div>
+                    <form id="loginForm">
+                        <label for="uname">Email or Username</label>
+                        <input class="form-control input-data" type="text" name="username" id="emailOrUsername"
+                            placeholder="Email or Username" required />
+                        <label id="psswd" for="pswd">Password</label>
+                        <input class="form-control input-data" type="password" name="password" id="password"
+                            placeholder="Password" required />
+                        <button id="loginSubmit" type="submit" class="btn-submit">Login</button>
+                        <div class="extra-content">
+                            <div id="forgotPassword">Forgot password ?</div>
+                        </div>
+
+                        <div class="extra-content">
+                            <div style="font-size: 16px;"> Don't have an account? </div>
+                            <div id="click-signup">Sign up</div>
+                        </div>
+                    </form>
+                    <form class="signupFormPage1">
+                        <label for="uname">Email</label>
+                        <input class="form-control input-data" type="text" placeholder="Email" name="email" id="email"
+                            required />
+                        <label for="uname">Username</label>
+                        <input class="form-control input-data" type="text" placeholder="username" name="username"
+                            id="username" required />
+                        <label for="uname">Password</label>
+                        <input class="form-control input-data" type="password" name="password" placeholder="Password"
+                            id="passwordSignup" required />
+                        <label for="uname">Confirm Password</label>
+                        <input class="form-control input-data" type="password" name="passwordConfirm"
+                            placeholder="Confirm Password" id="passwordConfirm" />
+
+                        <button type="submit" style="outline: none;" class="btn next-btn"><i
+                                class="fas fa-chevron-circle-right"></i>
+
+                        </button>
+
+                    </form>
+                    <form class="signupFormPage2">
+                        <label for="uname">First Name</label>
+                        <input class="form-control input-data" type="text" placeholder="First Name" name="firstname"
+                            id="firstName" required />
+                        <label for="uname">Last Name</label>
+                        <input class="form-control input-data" type="text" placeholder="Last Name" name="lastname"
+                            id="lastName" />
+                        <label for="uname">Date Of Birth</label>
+                        <input class="form-control input-data" type="text" name="DOB" placeholder="Date of Birth"
+                            id="DOB" required />
+                        <label for="uname">Phone Number</label>
+                        <input class="form-control input-data" type="text" placeholder="Phone Number" name="phoneNumber"
+                            id="phoneNumber" required />
+                        <button type="submit" class="btn-submit" style="margin-bottom: -20px;">Sign Up</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </center>
+
+    <script src="javascripts/bgCanvas.js"></script>
+    <script src="/javascripts/authorization.js"></script>
+    <script src="/javascripts/canvas.js"></script>
+</body>
+
+</html>

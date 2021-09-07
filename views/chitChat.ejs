@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="css/chitChat.css">
+<%- include('partials/header.ejs') %>
+    <div class="allInOneDiv">
+        <div class="listOutFriendOnLeft">
+            <div class="headerOnLeft">
+                <form class="form-inline my-2 my-lg-0 friend-list-search">
+                    <input id="chitChatFriendFilter" class="form-control mr-sm-2 search-form" type="search"
+                        placeholder="🕵🏻‍♂️&nbsp; Search" aria-label="Search" />
+                </form>
+            </div>
+            <div class="listFriend">
+                <!-- loop here friend list -->
+                <hr class="friendListDivider" style="margin-left: 0;height: 2px;color: antiquewhite;">
+                <% for(var list of friendlist) { %>
+                    <% if(list.requestedUserId.id !=user.id) {%>
+                        <div class="friendDisplay" chatRoomId="<%= list.chatRoomId %>">
+                            <img class="friendDisplayAvatar" src="<%= `users/${list.requestedUserId.userPhoto}` %>"
+                                alt="">
+                            <span class="nameLeftStyle">
+                                <%= list.requestedUserId.username %>
+                            </span>
+                            <div class="lastMessage">
+                                Hello, kya hal hai
+                                <div class="lastMessageTime">
+                                    9:20&nbsp;AM
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                            <% if(list.acceptedUserId.id !=user.id) {%>
+                                <div class="friendDisplay" chatRoomId="<%= list.chatRoomId %>">
+                                    <img class="friendDisplayAvatar"
+                                        src="<%= `users/${list.acceptedUserId.userPhoto}` %>" alt="">
+                                    <span class="nameLeftStyle">
+                                        <%= list.acceptedUserId.username %>
+                                    </span>
+                                    <div class="lastMessage">
+                                        badiya
+                                        <div class="lastMessageTime">
+                                            10:40&nbsp;PM
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <hr class="friendListDivider" style="height: 1px;">
+                                    <%}%>
+                                        <hr class="friendListDivider"
+                                            style="margin-left: 0;height: 2px;margin-top: -0.08em;color: antiquewhite;">
+
+            </div>
+        </div>
+        <div class="chatBoxRightDefault">
+            <div class="insideChatBoxDefault">
+
+
+
+            </div>
+        </div>
+        <div class="listOutFriendChatOnRight">
+            <div class="headerOnRight dis-inline-block">
+                <div style="background-color: rebeccapurple;padding-right: 20px;">
+                    <img class="imgAvatar" src="" alt="">
+                    <span class="nameStyle">no name yet</span>
+                    <div class="statusOnOffTyping"></div>
+                </div>
+
+                <div class="littleOptions">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+
+            <div class="chatBoxRight">
+
+
+            </div>
+            <div class="chatBoxRightLoadingInterFace">
+                <div class="text-center">
+                    <div class="spinner-border loadingSpinner" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chatInputForm">
+                <form class="ChatForm">
+                    <input class="inputText" type="text" name="" id="" placeholder="Type a message">
+                    <input type="text" name="" id="okokokokok" hidden>
+                    <i class="far fa-paper-plane inputTextSubmitBtn"></i>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="javascripts/chitChat.js"></script>
+    <script src="javascripts/partials/chitChatAnimation.js"></script>
+    <%- include('partials/footer.ejs') %>
